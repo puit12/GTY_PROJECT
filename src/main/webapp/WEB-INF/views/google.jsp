@@ -16,7 +16,7 @@
     $(document).ready(function() {
 
         (function() {
-            var cx = 'cx';
+            var cx = 'CXID';
             var gcse = document.createElement('script');
             gcse.type = 'text/javascript';
             gcse.async = true;
@@ -28,7 +28,7 @@
         setTimeout(function() {
             var element = google.search.cse.element.getElement('googleS');
             element.execute("${data}");
-        }, 200);
+        }, 300);
         console.log("${data}");
     });
 
