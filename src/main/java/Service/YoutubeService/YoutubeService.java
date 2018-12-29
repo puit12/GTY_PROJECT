@@ -16,7 +16,7 @@ public class YoutubeService {
 
     public YoutubeData searchToYoutube(String words){
         String uri = "https://www.googleapis.com/youtube/v3/search?part=snippet&";
-        String key = "";
+        String key = "key";
         uri += "key=" + key;
         uri += "&q=" + words;
         logger.info(uri);

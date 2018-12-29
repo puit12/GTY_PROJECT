@@ -1,0 +1,32 @@
+
+html, body {
+    width: 90%;
+    height: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#searchForm {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.viewSlide {
+    width:100%;
+    height: 100%;
+    border: 1px solid black;
+    -ms-overflow-style: none;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar {
+    display:none;
+}
+#googleView {
+
+    -ms-overflow-style: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+}

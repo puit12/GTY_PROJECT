@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 
 
 @Controller
+@RequestMapping("/youtube")
 public class YoutubeController {
 
     @Autowired

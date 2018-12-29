@@ -9,4 +9,8 @@ public class Hello {
     public String home(){
         return "index";
     }
+    @RequestMapping(value = "/result")
+    public String result(){
+        return "google";
+    }
 }
