@@ -41,7 +41,6 @@ public class YoutubeParse {
             youtubes[index].setTitle(item.getSnippet().getTitle());
             youtubes[index].setUrl(item.getSnippet().getThumbnails().getMedium().getUrl());
             index++;
-
         }
         return youtubes;
     }
