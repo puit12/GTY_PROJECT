@@ -1,0 +1,50 @@
+#twitchWrapper{
+    background:black;
+    color:white;
+}
+
+img{
+    width:100%;
+    height:100%;
+}
+
+#twitchWrapper a:link{
+    color:white;
+    text-decoration:none;
+}
+
+#twitchWrapper a:visited{
+    color:white;
+    text-decoration:none;
+}
+
+#twitchWrapper a:hover{
+    color:white;
+    text-decoration:none;
+}
+
+.twitchThumbnail{
+    float:left;
+    width:320px;
+    height:176px;
+    border: 2px solid black;
+}
+
+.twitchLogo{
+    width:50px;
+    height:50px;
+}
+
+.twitchItem{
+    width:100%;
+    height:180px;
+    margin: 5px 0px;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+}
+
+.twitchDetail{
+    width:65%;
+    float:left;
+    margin:10px;
+}
