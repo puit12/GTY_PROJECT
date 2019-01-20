@@ -8,7 +8,6 @@ import lombok.Data;
 public class YoutubeSnippet {
     private String publishedAt;
     private String channelTitle;
-    private String channelId;
     private String title;
     private String description;
     YoutubeThumbnail thumbnails;

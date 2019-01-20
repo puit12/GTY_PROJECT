@@ -22,11 +22,9 @@ public class TwitchService {
         uri += game;
 
         HttpHeaders header = new HttpHeaders();
-        header.add("Client-ID","ID");
-        logger.info(uri);
+        header.add("Client-ID","clientID");
         ResponseEntity<TwitchData> twitchData = restTemplate.exchange(uri, HttpMethod.GET, new HttpEntity(header),TwitchData.class);
-        logger.info(twitchData.getBody() +"");
-        logger.info(twitchData +"");
+
         return twitchData.getBody();
     }
 }

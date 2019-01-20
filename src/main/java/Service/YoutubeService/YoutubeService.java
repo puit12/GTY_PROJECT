@@ -15,12 +15,13 @@ public class YoutubeService {
     private Logger logger = LoggerFactory.getLogger(YoutubeService.class);
 
     public YoutubeData searchToYoutube(String words){
-        String uri = "https://www.googleapis.com/youtube/v3/search?part=snippet&";
-        String key = "KEY";
+        String uri = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&";
+        String key = "Youtube Key";
         uri += "key=" + key;
         uri += "&q=" + words;
-        logger.info(uri);
         ResponseEntity<YoutubeData> youtubeData = restTemplate.exchange(uri, HttpMethod.GET,null,YoutubeData.class);
+
+        logger.info(youtubeData.getBody() +"");
         return youtubeData.getBody();
     }
 }

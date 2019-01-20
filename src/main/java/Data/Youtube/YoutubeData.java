@@ -7,8 +7,10 @@ import lombok.Data;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class YoutubeData {
+
     @JsonProperty("items")
     YoutubeItem[] items;
+
 }
 
 

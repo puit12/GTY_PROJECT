@@ -16,7 +16,7 @@
     $(document).ready(function() {
 
         (function() {
-            var cx = 'CXID';
+            var cx = '011238770061073225825:sl_p9d933wo';
             var gcse = document.createElement('script');
             gcse.type = 'text/javascript';
             gcse.async = true;
@@ -28,7 +28,7 @@
         setTimeout(function() {
             var element = google.search.cse.element.getElement('googleS');
             element.execute("${data}");
-        }, 300);
+        }, 500);
         console.log("${data}");
     });
 
