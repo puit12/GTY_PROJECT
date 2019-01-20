@@ -1,8 +1,11 @@
 package Service.YoutubeService;
 
+import Data.Youtube.Youtube;
 import Data.Youtube.YoutubeData;
 import Data.Youtube.YoutubeItem;
 import lombok.Data;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -10,23 +13,36 @@ import org.springframework.stereotype.Service;
 public class YoutubeParse {
     YoutubeService youtubeService;
     YoutubeData youtubeData;
+    private Logger logger = LoggerFactory.getLogger(YoutubeParse.class);
 
-    public String[][] parseYoutubeData(String data){
+    public Youtube[] parseYoutubeData(String data){
         youtubeData = youtubeService.searchToYoutube(data);
         YoutubeItem youtubeItems[] = youtubeData.getItems();
 
-        String dataArray[][] = new String[youtubeItems.length][6];
+        Youtube youtubes[] = new Youtube[youtubeItems.length];
+        for(int i = 0 ; i < youtubeItems.length; i++){
+            youtubes[i] = new Youtube();
+        }
+
         int index = 0;
 
         for (YoutubeItem item: youtubeItems) {
-            dataArray[index][0] = item.getSnippet().getChannelId();
-            dataArray[index][1] = item.getSnippet().getChannelTitle();
-            dataArray[index][2] = item.getSnippet().getDescription();
-            dataArray[index][3] = item.getSnippet().getPublishedAt();
-            dataArray[index][4] = item.getSnippet().getTitle();
-            dataArray[index][5] = item.getSnippet().getThumbnails().getMedium().getUrl();
+            if(item.getId().getChannelId() == null){
+                youtubes[index].setVideoId(item.getId().getVideoId());
+                youtubes[index].setCheckVideoChannel(0);
+            }
+            else {
+                youtubes[index].setChannelId(item.getId().getChannelId());
+                youtubes[index].setCheckVideoChannel(1);
+            }
+            youtubes[index].setChannelTitle(item.getSnippet().getChannelTitle());
+            youtubes[index].setDescription(item.getSnippet().getDescription());
+            youtubes[index].setPublishedAt(item.getSnippet().getPublishedAt());
+            youtubes[index].setTitle(item.getSnippet().getTitle());
+            youtubes[index].setUrl(item.getSnippet().getThumbnails().getMedium().getUrl());
+            index++;
         }
-        return dataArray;
+        return youtubes;
     }
 
 }

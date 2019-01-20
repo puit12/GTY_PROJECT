@@ -19,7 +19,7 @@ public class YoutubeController {
     @RequestMapping("/search/")
     public String searchToYoutube(Model model, HttpServletRequest request){
         String data = request.getParameter("name");
-        model.addAttribute("data",youtubeParse.parseYoutubeData(data));
+        model.addAttribute("data", youtubeParse.parseYoutubeData(data));
         return "youtube";
     }
 

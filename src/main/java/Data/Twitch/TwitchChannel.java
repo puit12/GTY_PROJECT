@@ -9,4 +9,9 @@ public class TwitchChannel {
     String name;
     String display_name;
     int followers;
+    String game;
+    String logo;
+    String status;
+    String url;
+
 }

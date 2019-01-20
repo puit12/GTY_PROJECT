@@ -1,6 +1,9 @@
 package Config;
 
+import Data.Twitch.TwitchData;
 import Data.Youtube.YoutubeData;
+import Service.TwitchService.TwitchParse;
+import Service.TwitchService.TwitchService;
 import Service.YoutubeService.YoutubeParse;
 import Service.YoutubeService.YoutubeService;
 import org.springframework.context.annotation.Bean;
@@ -20,12 +23,14 @@ public class AppConfig {
     }
 
     @Bean
-    public YoutubeService youtubeService(){
-        return new YoutubeService();
-    }
+    public TwitchParse twitchParse(){
+        TwitchParse twitchParse = new TwitchParse();
+        TwitchService twitchService = new TwitchService();
+        TwitchData twitchData = new TwitchData();
 
-    @Bean
-    public YoutubeData youtubeData(){
-        return new YoutubeData();
+        twitchParse.setTwitchService(twitchService);
+        twitchParse.setTwitchData(twitchData);
+        return twitchParse;
+
     }
 }

@@ -8,4 +8,6 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class TwitchStream {
     TwitchChannel channel;
+    TwitchPreview preview;
+    int viewers;
 }
