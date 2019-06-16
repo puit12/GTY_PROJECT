@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jbtest">
+    <output-path>$PROJECT_DIR$/out/artifacts/jbtest</output-path>
+    <root id="archive" name="jbnewpro_war.war">
+      <element id="artifact" artifact-name="jbnewpro:war exploded" />
+      <element id="artifact" artifact-name="jbnewpro" />
+      <element id="artifact" artifact-name="jbnewpro:war" />
+    </root>
+  </artifact>
+</component>
