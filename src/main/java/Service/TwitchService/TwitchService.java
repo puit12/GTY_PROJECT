@@ -17,12 +17,12 @@ public class TwitchService {
     private Logger logger = LoggerFactory.getLogger(TwitchService.class);
 
     public TwitchData searchToTwitch(String words){
-        String uri = "https://api.twitch.tv/kraken/search/streams?query=";
+        String uri = "https://api.twitch.tv/kraken/search/streams?limit=25&query=";
         String game = words;
         uri += game;
 
         HttpHeaders header = new HttpHeaders();
-        header.add("Client-ID","clientID");
+        header.add("Client-ID","2lqdp6rsn03hc0g206cdi87ip2hwf8");
         ResponseEntity<TwitchData> twitchData = restTemplate.exchange(uri, HttpMethod.GET, new HttpEntity(header),TwitchData.class);
 
         return twitchData.getBody();

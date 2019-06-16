@@ -4,7 +4,7 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="/resources/youtube.css?ver=1"/>
+    <link rel="stylesheet" type="text/css" href="resources/youtube.css"/>
 </head>
 <body>
 

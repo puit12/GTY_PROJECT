@@ -7,9 +7,10 @@
     <link rel="stylesheet" type="text/css" href="/resources/twitch.css"/>
 </head>
 <body>
-
+<p id="resultNum" style="font-size:0px;">${dataNum}</p>
 <div id="twitchWrapper">
-    <c:forEach var="twitch" items="${data}">
+    <c:forEach var="twitch" items="${data}" begin="${pageStart}" end="${pageEnd}">
+        <c:if test="${not empty twitch.name}">
         <div class="twitchItem">
             <a href="${twitch.url}" target="_blank">
                 <div class="twitchThumbnail">
@@ -34,6 +35,7 @@
                 </div>
             </a>
         </div>
+        </c:if>
     </c:forEach>
 </div>
 </body>

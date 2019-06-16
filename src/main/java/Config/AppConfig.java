@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class AppConfig {
+
     @Bean
     public YoutubeParse youtubeParse(){
         YoutubeParse youtubeParse = new YoutubeParse();
@@ -31,6 +32,5 @@ public class AppConfig {
         twitchParse.setTwitchService(twitchService);
         twitchParse.setTwitchData(twitchData);
         return twitchParse;
-
     }
 }

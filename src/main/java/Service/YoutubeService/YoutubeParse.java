@@ -27,6 +27,9 @@ public class YoutubeParse {
         int index = 0;
 
         for (YoutubeItem item: youtubeItems) {
+            if(item.getId() == null){
+                continue;
+            }
             if(item.getId().getChannelId() == null){
                 youtubes[index].setVideoId(item.getId().getVideoId());
                 youtubes[index].setCheckVideoChannel(0);

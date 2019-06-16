@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script type="text/javascript" src="../../resources/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="resources/jquery-3.3.1.min.js"></script>
 </head>
 <body>
     <gcse:searchresults-only gname="googleS"></gcse:searchresults-only>
