@@ -22,7 +22,7 @@ public class TwitchService {
         uri += game;
 
         HttpHeaders header = new HttpHeaders();
-        header.add("Client-ID","2lqdp6rsn03hc0g206cdi87ip2hwf8");
+        header.add("Client-ID","value");
         ResponseEntity<TwitchData> twitchData = restTemplate.exchange(uri, HttpMethod.GET, new HttpEntity(header),TwitchData.class);
 
         return twitchData.getBody();

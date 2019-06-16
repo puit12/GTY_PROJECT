@@ -18,28 +18,31 @@
     <input type="button" value="검색" id="wordInputBtn"/>
 </form>
 
-<div class="viewSlide">
-    <div id="googleView">
+<div id="listWrapper">
+<ul id="contentImage">
+    <li id="twitchImageBox">
+        <p>T</p>
+    </li>
+    <div id="twitchContentBox" class="contentBox">
+        <div id="twitch-embed"></div>
     </div>
-    <div id="twitchView">
+
+    <li id="youtubeImageBox">
+        <p>Y</p>
+    </li>
+    <div id="youtubeContentBox" class="contentBox">
+
     </div>
-    <div id="youtubeView">
+    <li id="googleImageBox">
+        <p>G</p>
+    </li>
+    <div id="googleContentBox" class="contentBox">
+
     </div>
-</div>
-<div class="viewSlide" id="testSlide">
-    <div id="a1">
-        sadsad
-    </div>
-    <div id="a2">
-        asdsad122
-    </div>
-    <div id="a3">
-        ㄴㅁㅇㅁㄴ
-    </div>
+</ul>
 </div>
 
 <!-- Add a placeholder for the Twitch embed -->
-<div id="twitch-embed"></div>
 
 <!-- Load the Twitch embed script -->
 <script src="https://embed.twitch.tv/embed/v1.js"></script>
@@ -56,10 +59,9 @@
 
 
 <script>
-
     $(document).ready(function () {
-        $('.viewSlide').slick({
-            asNavFor: ".viewSlide"
+        $('#twitchImageBox').click(function () {
+            $("#twitchContentBox").slideToggle();
         });
     });
 

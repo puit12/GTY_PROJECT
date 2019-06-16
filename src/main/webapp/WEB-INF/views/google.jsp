@@ -5,10 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script type="text/javascript" src="resources/jquery-3.3.1.min.js"></script>
+
 </head>
 <body>
     <gcse:searchresults-only gname="googleS"></gcse:searchresults-only>
+    <script type="text/javascript" src="resources/jquery-3.3.1.min.js"></script>
 </body>
 
 
@@ -16,7 +17,7 @@
     $(document).ready(function() {
 
         (function() {
-            var cx = '011238770061073225825:sl_p9d933wo';
+            var cx = 'code';
             var gcse = document.createElement('script');
             gcse.type = 'text/javascript';
             gcse.async = true;
@@ -31,11 +32,6 @@
         }, 500);
         console.log("${data}");
     });
-
-
-
-
-
 
 </script>
 </html>
