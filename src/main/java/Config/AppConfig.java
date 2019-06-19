@@ -1,6 +1,7 @@
 package Config;
 
 import Data.Twitch.TwitchData;
+import Data.Twitch.TwitchInformation;
 import Data.Youtube.YoutubeData;
 import Service.TwitchService.TwitchParse;
 import Service.TwitchService.TwitchService;
@@ -28,9 +29,11 @@ public class AppConfig {
         TwitchParse twitchParse = new TwitchParse();
         TwitchService twitchService = new TwitchService();
         TwitchData twitchData = new TwitchData();
+        TwitchInformation twitchInformation= new TwitchInformation();
 
         twitchParse.setTwitchService(twitchService);
         twitchParse.setTwitchData(twitchData);
+        twitchParse.setTwitchInformation(twitchInformation);
         return twitchParse;
     }
 }

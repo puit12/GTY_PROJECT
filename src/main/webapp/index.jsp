@@ -3,12 +3,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>index</title>
+    <title>TYG</title>
     <link rel="stylesheet" type="text/css" href="resources/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="resources/slick/slick-theme.css"/>
-    <link rel="stylesheet" type="text/css" href="resources/index.css"/>
-    <script type="text/javascript" src="resources/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="resources/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="resources/index.css?after"/>
 </head>
 
 <body>
@@ -21,20 +19,34 @@
 <div id="listWrapper">
 <ul id="contentImage">
     <li id="twitchImageBox">
-        <p>T</p>
+        <p id="twitchP">T</p>
     </li>
     <div id="twitchContentBox" class="contentBox">
-        <div id="twitch-embed"></div>
+            <div id="twitchStreamList"></div>
+
+          <div id="twitch-embed-wrapper">
+             <div id="twitch-embed"></div>
+              <div id="twitchStreamDescription">
+               </div>
+          </div>
     </div>
 
     <li id="youtubeImageBox">
-        <p>Y</p>
+        <p id="youtubeP">Y</p>
     </li>
     <div id="youtubeContentBox" class="contentBox">
+        <div id="youtubeVideoList">
 
+        </div>
+        <div id="youtube-video-wrapper">
+            <div id="youtube-video"></div>
+            <div id="youtubeVideoDescription">
+
+            </div>
+        </div>
     </div>
     <li id="googleImageBox">
-        <p>G</p>
+        <p id="googleP">G</p>
     </li>
     <div id="googleContentBox" class="contentBox">
 
@@ -50,11 +62,13 @@
 <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
 <script type="text/javascript">
     new Twitch.Embed("twitch-embed", {
-        width: 854,
-        height: 480,
+        width: 500,
+        height: 300,
         channel: "lol_ambition"
     });
 </script>
+<script type="text/javascript" src="resources/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="resources/slick/slick.min.js"></script>
 </body>
 
 
@@ -109,9 +123,7 @@
             type: "POST",
             url: "/twitch/search/"+ formData +"/0",
             success: function (data) {
-                $("#twitchView").html(data);
-                alert(data);
-
+                console.log(data);
             },
             error: function (data) {
                 alert(data);

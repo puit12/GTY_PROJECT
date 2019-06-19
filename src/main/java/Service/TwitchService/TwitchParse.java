@@ -2,6 +2,7 @@ package Service.TwitchService;
 
 import Data.Twitch.Twitch;
 import Data.Twitch.TwitchData;
+import Data.Twitch.TwitchInformation;
 import Data.Twitch.TwitchStream;
 import lombok.Data;
 import org.slf4j.Logger;
@@ -13,9 +14,11 @@ import org.springframework.stereotype.Service;
 public class TwitchParse {
     TwitchService twitchService;
     TwitchData twitchData;
+    TwitchInformation twitchInformation;
+
     private Logger logger = LoggerFactory.getLogger(TwitchParse.class);
 
-    public Twitch[] parseTwitchData(String data) {
+    public TwitchInformation parseTwitchData(String data, int pageStart, int pageEnd) {
         twitchData = twitchService.searchToTwitch(data);
         TwitchStream twitchStreams[] = twitchData.getStreams();
         Twitch twitches[] = new Twitch[25];
@@ -36,7 +39,10 @@ public class TwitchParse {
             index++;
         }
         logger.info(index + "");
-        return twitches;
+        twitchInformation.setTwitch(twitches);
+        twitchInformation.setStartNum(pageStart);
+        twitchInformation.setEndNum(pageEnd);
+        return twitchInformation;
     }
 
 }

@@ -17,7 +17,7 @@
     $(document).ready(function() {
 
         (function() {
-            var cx = 'cx';
+            var cx = '';
             var gcse = document.createElement('script');
             gcse.type = 'text/javascript';
             gcse.async = true;
