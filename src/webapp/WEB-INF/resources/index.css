@@ -1,0 +1,191 @@
+
+body{
+    background-color: black;
+}
+
+#searchForm1 {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#googleView {
+    -ms-overflow-style: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+}
+
+#listWrapper{
+    position: relative;
+    width: 1400px;
+    height: 720px;
+    margin: 0 auto;
+    padding:0px;
+}
+
+ul {
+    list-style:none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    border: 1px solid black;
+    margin: 0px;
+    width: 300px;
+    height: 238px;
+
+}
+
+li p {
+    -webkit-transition :all 0.7s ease;
+    font-size: 80pt;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 50px;
+    color: white;
+}
+
+#twitchImageBox:before {
+    -webkit-transition :all 0.7s ease;
+    position: absolute;
+    text-align: center;
+    left:0;
+    content: "Twitch";
+    font-size: 20pt;
+    font-weight: bolder;
+    margin-top: 0px;
+    color: white;
+    opacity: 0;
+    -webkit-transform: translate(-10%,0);
+}
+#googleImageBox:before {
+    -webkit-transition :all 0.7s ease;
+    position: absolute;
+    text-align: center;
+    left:0;
+    content: "Google";
+    font-size: 20pt;
+    font-weight: bolder;
+    margin-top: 0px;
+    color: white;
+    opacity: 0;
+    -webkit-transform: translate(-10%,0);
+}
+#youtubeImageBox:before {
+    -webkit-transition :all 0.7s ease;
+    position: absolute;
+    text-align: center;
+    left:0;
+    content: "Youtube";
+    font-size: 20pt;
+    font-weight: bolder;
+    margin-top: 0px;
+    color: white;
+    opacity: 0;
+    -webkit-transform: translate(-10%,0);
+}
+li:hover p{
+    opacity: 0;
+}
+#twitchImageBox:hover:before {
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+}
+#googleImageBox:hover:before {
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+}
+#youtubeImageBox:hover:before {
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+}
+
+
+#twitchImageBox {
+    background-color: rebeccapurple;
+}
+
+#youtubeImageBox{
+    background-color: lightpink;
+}
+#googleImageBox{
+    background-color: black;
+}
+#twitchContentBox {
+    margin : 0;
+    padding: 0;
+    width: 1100px;
+    height: 718px;
+    position : absolute;
+    right:0px;
+    top: 0px;
+}
+.contentBox{
+    display:grid;
+    grid-template-columns: 300px 800px;
+    grid-template-rows: 100%;
+}
+#twitch-embed-wrapper{
+    width:100%;
+    height:100%;
+}
+
+#twitch-embed{
+    width:100%;
+    height:100%;
+}
+
+iframe{
+    display:block;
+    width:100%;
+    height:100%;
+}
+#twitchStreamListBox{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    background-color: #2f2f2f;
+    overflow: scroll;
+    overflow-x:hidden;
+}
+#twitchStreamList{
+    margin:0;
+}
+
+dt {
+    width: 300px;
+    height: 177px;
+    border: 1px solid black;
+}
+
+dd{
+    width: 300px;
+    height: 60px;
+    border-bottom: 1px solid red;
+    margin: 0px;
+    position:relative;
+    font-size: xx-small;
+    color: white;
+    overflow:hidden;
+}
+
+.streamDes{
+    position:absolute;
+    top:0px;
+    right:0px;
+    width:230px;
+    border: 1px solid ;
+}
+
+.logo{
+    width: 60px;
+    height: 100%;
+    position:relative;
+}
+img {
+    width: 100%;
+    height: 100%;
+}

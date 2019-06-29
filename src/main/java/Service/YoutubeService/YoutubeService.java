@@ -16,7 +16,7 @@ public class YoutubeService {
 
     public YoutubeData searchToYoutube(String words){
         String uri = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&";
-        String key = "key";
+        String key = "";
         uri += "key=" + key;
         uri += "&q=" + words;
         ResponseEntity<YoutubeData> youtubeData = restTemplate.exchange(uri, HttpMethod.GET,null,YoutubeData.class);
